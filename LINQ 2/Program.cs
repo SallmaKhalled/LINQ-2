@@ -141,6 +141,12 @@
             Console.WriteLine("\n 10. Total units in stock ");
             Console.WriteLine(products.Sum(p => p.UnitsInStock));
             #endregion
+
+            #region Cheapest and most expensive prices
+            Console.WriteLine("\n 11. Min / Max price ");
+            Console.WriteLine($"Cheapest: {products.Min(p => p.UnitPrice)}");
+            Console.WriteLine($"Most expensive: {products.Max(p => p.UnitPrice)}");
+            #endregion
         }
     }
 }
