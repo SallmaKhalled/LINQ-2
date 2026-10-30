@@ -147,6 +147,14 @@
             Console.WriteLine($"Cheapest: {products.Min(p => p.UnitPrice)}");
             Console.WriteLine($"Most expensive: {products.Max(p => p.UnitPrice)}");
             #endregion
+
+            #region Distinct categories
+            Console.WriteLine("\n 12. Distinct categories ");
+            foreach (var c in products.Select(p => p.Category).Distinct())
+            {
+                Console.WriteLine(c);
+            }
+            #endregion
         }
     }
 }
