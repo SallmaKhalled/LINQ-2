@@ -61,6 +61,15 @@
             }
             #endregion
 
+            #region TakeWhile price < 25
+            Console.WriteLine("\n 3. TakeWhile UnitPrice < 25 ");
+            var cheap = products.OrderBy(p => p.UnitPrice).TakeWhile(p => p.UnitPrice < 25);
+            foreach (var p in cheap)
+            {
+                Console.WriteLine(p);
+            }
+            #endregion
+
 
         }
     }
