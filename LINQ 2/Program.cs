@@ -84,6 +84,19 @@
             Console.WriteLine(ids.Contains(9));
             #endregion
 
+            #region Group by Category and print each group with its product count
+            Console.WriteLine("\n 6. Group by Category with count ");
+            var byCategory = products.GroupBy(p => p.Category);
+            foreach (var g in byCategory)
+            {
+                Console.WriteLine($"{g.Key} ({g.Count()} products)");
+                foreach (var p in g)
+                {
+                    Console.WriteLine($"{p.ProductName}");
+                }
+            }
+            #endregion
+
         }
     }
 }
