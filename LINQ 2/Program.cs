@@ -136,6 +136,11 @@
                 Console.WriteLine($"{x.Country}: Count={x.Count}, TotalOrderValue={x.TotalOrderValue}");
             }
             #endregion
+
+            #region
+            Console.WriteLine("\n 10. Total units in stock ");
+            Console.WriteLine(products.Sum(p => p.UnitsInStock));
+            #endregion
         }
     }
 }
