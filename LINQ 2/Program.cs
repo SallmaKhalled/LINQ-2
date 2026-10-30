@@ -208,7 +208,16 @@
             foreach (var s in combined)
             {
                 Console.WriteLine(s);
-            } 
+            }
+            #endregion
+
+            #region Zip product with customer (by position) 
+            Console.WriteLine("\n 21. Zip ");
+            var sold = products.Zip(customers, (p, c) => $"{p.ProductName} sold to {c.CompanyName}");
+            foreach (var s in sold)
+            {
+                Console.WriteLine(s);
+            }
             #endregion
         }
     }
