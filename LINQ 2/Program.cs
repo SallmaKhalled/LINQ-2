@@ -119,6 +119,23 @@
                 Console.WriteLine(c);
             }
             #endregion
+
+            #region QUERY SYNTAX
+            Console.WriteLine("\n 9. Customers by Country (query syntax) ");
+            var byCountry =
+                from c in customers
+                group c by c.Country into g
+                select new
+                {
+                    Country = g.Key,
+                    Count = g.Count(),
+                    TotalOrderValue = g.Sum(c => c.Orders.Sum(o => o.Total))
+                };
+            foreach (var x in byCountry)
+            {
+                Console.WriteLine($"{x.Country}: Count={x.Count}, TotalOrderValue={x.TotalOrderValue}");
+            }
+            #endregion
         }
     }
 }
