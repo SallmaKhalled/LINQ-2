@@ -162,6 +162,13 @@
             int[] setB = { 3, 6, 9, 12, 15, 13 };
             Console.WriteLine(string.Join(", ", setA.Except(setB)));
             #endregion
+
+            #region list1 but NOT list2 (case-insensitive)
+            Console.WriteLine("\n 14. list1 Except list2 (ignore case) ");
+            string[] list1 = { "Germany", "France", "UK", "Spain" };
+            string[] list2 = { "france", "SPAIN", "Italy" };
+            Console.WriteLine(string.Join(", ", list1.Except(list2, StringComparer.OrdinalIgnoreCase)));
+            #endregion
         }
     }
 }
