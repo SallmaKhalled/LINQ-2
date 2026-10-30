@@ -200,6 +200,16 @@
             var evens = Enumerable.Range(1, 30).Where(n => n % 2 == 0);
             Console.WriteLine(string.Join(", ", evens));
             #endregion
+
+            #region Concat first 3 product names with first 3 customer company names
+            Console.WriteLine("\n 20. Concat ");
+            var combined = products.Select(p => p.ProductName).Take(3)
+                .Concat(customers.Select(c => c.CompanyName).Take(3));
+            foreach (var s in combined)
+            {
+                Console.WriteLine(s);
+            } 
+            #endregion
         }
     }
 }
