@@ -48,7 +48,17 @@
             foreach (var p in top3) 
             {
                 Console.WriteLine(p);
-            } 
+            }
+            #endregion
+
+            #region Page 2, page size = 5
+            Console.WriteLine("\n 2. Page 2 (size 5) ");
+            int page = 2, pageSize = 5;
+            var pageItems = products.Skip((page - 1) * pageSize).Take(pageSize);
+            foreach (var p in pageItems)
+            {
+                Console.WriteLine(p);
+            }
             #endregion
 
 
