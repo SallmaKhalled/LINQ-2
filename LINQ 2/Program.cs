@@ -70,6 +70,13 @@
             }
             #endregion
 
+            #region Are ALL Seafood products in stock?
+            Console.WriteLine("\n 4. All Seafood in stock? ");
+            bool allSeafoodInStock = products
+                .Where(p => p.Category == "Seafood")
+                .All(p => p.UnitsInStock > 0);
+            Console.WriteLine(allSeafoodInStock);
+            #endregion
 
         }
     }
