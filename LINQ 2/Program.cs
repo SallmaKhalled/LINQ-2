@@ -194,6 +194,12 @@
                 Console.WriteLine(line);
             }
             #endregion
+
+            #region Even numbers between 1 and 30
+            Console.WriteLine("\n 19. Even numbers 1..30 ");
+            var evens = Enumerable.Range(1, 30).Where(n => n % 2 == 0);
+            Console.WriteLine(string.Join(", ", evens));
+            #endregion
         }
     }
 }
