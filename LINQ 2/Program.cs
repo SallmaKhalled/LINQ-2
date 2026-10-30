@@ -43,6 +43,12 @@
 
 
             #region Top 3 most expensive products
+            Console.WriteLine("1. Top 3 most expensive  "); 
+            var top3 = products.OrderByDescending(p => p.UnitPrice).Take(3);
+            foreach (var p in top3) 
+            {
+                Console.WriteLine(p);
+            } 
             #endregion
 
 
