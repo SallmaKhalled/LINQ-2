@@ -78,6 +78,12 @@
             Console.WriteLine(allSeafoodInStock);
             #endregion
 
+            #region Does the ID list contain 9?
+            Console.WriteLine("\n 5. ids contains 9? ");
+            int[] ids = { 3, 9, 13, 18 };
+            Console.WriteLine(ids.Contains(9));
+            #endregion
+
         }
     }
 }
