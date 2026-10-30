@@ -169,6 +169,12 @@
             string[] list2 = { "france", "SPAIN", "Italy" };
             Console.WriteLine(string.Join(", ", list1.Except(list2, StringComparer.OrdinalIgnoreCase)));
             #endregion
+
+            #region Dictionary<int, Product> keyed by ProductID, print product 18
+            Console.WriteLine("\n 15. ToDictionary ");
+            Dictionary<int, Product> productDict = products.ToDictionary(p => p.ProductID);
+            Console.WriteLine(productDict[18]);
+            #endregion
         }
     }
 }
