@@ -180,6 +180,12 @@
             Console.WriteLine("\n 16. First price > 50 ");
             Console.WriteLine(products.First(p => p.UnitPrice > 50));
             #endregion
+
+            #region First product with price > 500 -> null instead of exception
+            Console.WriteLine("\n 17. FirstOrDefault price > 500 ");
+            var expensive = products.FirstOrDefault(p => p.UnitPrice > 500);
+            Console.WriteLine(expensive is null ? "null (no product found)" : expensive.ToString());
+            #endregion
         }
     }
 }
