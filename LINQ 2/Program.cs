@@ -175,6 +175,11 @@
             Dictionary<int, Product> productDict = products.ToDictionary(p => p.ProductID);
             Console.WriteLine(productDict[18]);
             #endregion
+
+            #region First product with price > 50 (throws if none match)
+            Console.WriteLine("\n 16. First price > 50 ");
+            Console.WriteLine(products.First(p => p.UnitPrice > 50));
+            #endregion
         }
     }
 }
