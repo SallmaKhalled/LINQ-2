@@ -97,6 +97,16 @@
             }
             #endregion
 
+            #region Group by Category, project only product names per group
+            Console.WriteLine("\n 7. Names per category ");
+            var namesPerCategory = products
+                .GroupBy(p => p.Category)
+                .Select(g => new { Category = g.Key, Names = g.Select(p => p.ProductName) });
+            foreach (var g in namesPerCategory)
+            {
+                Console.WriteLine($"{g.Category}: {string.Join(", ", g.Names)}");
+            }
+            #endregion
         }
     }
 }
