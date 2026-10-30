@@ -107,6 +107,18 @@
                 Console.WriteLine($"{g.Category}: {string.Join(", ", g.Names)}");
             }
             #endregion
+
+            #region Categories that have MORE THAN 3 products
+            Console.WriteLine("\n 8. Categories with > 3 products ");
+            var bigCategories = products
+                .GroupBy(p => p.Category)
+                .Where(g => g.Count() > 3)
+                .Select(g => g.Key);
+            foreach (var c in bigCategories)
+            {
+                Console.WriteLine(c);
+            }
+            #endregion
         }
     }
 }
