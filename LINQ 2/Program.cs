@@ -186,6 +186,14 @@
             var expensive = products.FirstOrDefault(p => p.UnitPrice > 500);
             Console.WriteLine(expensive is null ? "null (no product found)" : expensive.ToString());
             #endregion
+
+            #region Multiplication table row for 7
+            Console.WriteLine("\n 18. Multiplication table of 7 ");
+            foreach (var line in Enumerable.Range(1, 10).Select(i => $"7 x {i} = {7 * i}"))
+            {
+                Console.WriteLine(line);
+            }
+            #endregion
         }
     }
 }
