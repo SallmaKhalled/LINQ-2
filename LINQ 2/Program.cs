@@ -1,0 +1,51 @@
+﻿namespace LINQ_2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            List<Product> products = new()
+            {
+                new() { ProductID = 1,  ProductName = "Chai",                   Category = "Beverages",     UnitPrice = 18m,    UnitsInStock = 39 },
+                new() { ProductID = 2,  ProductName = "Chang",                  Category = "Beverages",     UnitPrice = 19m,    UnitsInStock = 17 },
+                new() { ProductID = 3,  ProductName = "Aniseed Syrup",          Category = "Condiments",    UnitPrice = 10m,    UnitsInStock = 13 },
+                new() { ProductID = 4,  ProductName = "Ikura",                  Category = "Seafood",       UnitPrice = 31m,    UnitsInStock = 31 },
+                new() { ProductID = 5,  ProductName = "Konbu",                  Category = "Seafood",       UnitPrice = 6m,     UnitsInStock = 24 },
+                new() { ProductID = 6,  ProductName = "Carnarvon Tigers",       Category = "Seafood",       UnitPrice = 62.5m,  UnitsInStock = 42 },
+                new() { ProductID = 7,  ProductName = "Cote de Blaye",          Category = "Beverages",     UnitPrice = 263.5m, UnitsInStock = 17 },
+                new() { ProductID = 8,  ProductName = "Tofu",                   Category = "Produce",       UnitPrice = 23.25m, UnitsInStock = 35 },
+                new() { ProductID = 9,  ProductName = "Mishi Kobe Niku",        Category = "Meat",          UnitPrice = 97m,    UnitsInStock = 29 },
+                new() { ProductID = 10, ProductName = "Sir Rodney's Marmalade", Category = "Confections",   UnitPrice = 81m,    UnitsInStock = 40 },
+                new() { ProductID = 11, ProductName = "Queso Cabrales",         Category = "Dairy",         UnitPrice = 21m,    UnitsInStock = 22 },
+                new() { ProductID = 12, ProductName = "Genen Shouyu",           Category = "Condiments",    UnitPrice = 15.5m,  UnitsInStock = 39 },
+                new() { ProductID = 13, ProductName = "Pavlova",                Category = "Confections",   UnitPrice = 17.45m, UnitsInStock = 29 },
+                new() { ProductID = 14, ProductName = "Alice Mutton",           Category = "Meat",          UnitPrice = 39m,    UnitsInStock = 0  },
+                new() { ProductID = 15, ProductName = "Teatime Chocolate",      Category = "Confections",   UnitPrice = 9.2m,   UnitsInStock = 25 },
+                new() { ProductID = 16, ProductName = "Sasquatch Ale",          Category = "Beverages",     UnitPrice = 14m,    UnitsInStock = 111 },
+                new() { ProductID = 17, ProductName = "Steeleye Stout",         Category = "Beverages",     UnitPrice = 18m,    UnitsInStock = 20 },
+                new() { ProductID = 18, ProductName = "Gorgonzola",             Category = "Dairy",         UnitPrice = 12.5m,  UnitsInStock = 86 },
+            };
+
+            List<Customer> customers = new()
+            {
+                new() { CustomerID = "ALFKI", CompanyName = "Alfreds Futterkiste",Country = "Germany",
+                    Orders = new() { new() { OrderID = 1, Total = 100m }, new() { OrderID = 2, Total = 250m } } },
+
+                new() { CustomerID = "ANATR", CompanyName = "Ana Trujillo", Country = "Mexico",
+                    Orders = new() { new() { OrderID = 3, Total = 80m } } },
+
+                new() { CustomerID = "BLAUS", CompanyName = "Blauer See Delikatessen", Country = "Germany",
+                    Orders = new() { new() { OrderID = 4, Total = 300m } } },
+
+                new() { CustomerID = "BONAP", CompanyName = "Bon app'", Country = "France",
+                    Orders = new() { new() { OrderID = 5, Total = 175m } } },
+            };
+
+
+            #region Top 3 most expensive products
+            #endregion
+
+
+        }
+    }
+}
